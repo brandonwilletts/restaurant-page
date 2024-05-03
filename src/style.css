@@ -1,3 +1,105 @@
-button {
-    color: red;
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    --background: #fff8e8;
+    --yellow: rgb(242, 208, 62);
+    --yellow-trans: rgb(242, 208, 62, 0.4);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--background);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--background);
+    padding: 24px 32px;
+    gap: 32px;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+nav > div {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+}
+
+nav > div > div {
+    font-size: 24pt;
+    font-weight: 700;
+    margin-right: 32px;
+    font-family: Lobster;
+}
+
+nav > div > div:hover {
+    cursor: pointer;
+}
+
+.btn-nav {
+    font-size: 12pt;
+    border: none;
+    background-color: transparent;
+    margin-top: 6px;
+    padding: 0;
+    border-bottom: 6px solid transparent;
+}
+
+.btn-order {
+    font-size: 10pt;
+    font-weight: 600;;
+    background-color: var(--yellow);
+    padding: 14px 60px;
+    border-radius: 32px;
+    border: 1.5px solid black;
+}
+
+.btn-nav:hover {
+    border-bottom: 6px solid var(--yellow);
+    cursor: pointer;
+}
+
+.btn-order:hover {
+    background-color: var(--yellow-trans);
+    cursor: pointer;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    gap: 32px;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.menu-container > h2 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.menu-item {
+
+}
+
+.menu-image {    
+    aspect-ratio: 1;
+    width: 100%;
+    border-radius: 8px;
+    background-size: cover;
+}
+
+.menu-price {
+
 }

@@ -1,3 +1,4 @@
 import "./style.css";
+import renderMenuPage from "./menu";
 
-console.log("yo!");
+renderMenuPage();
