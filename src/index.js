@@ -10,11 +10,23 @@ function pageNav() {
     function clearContent() {
         content.textContent = "";
     }
+
+    function addEventListenerToOrderButtons() {
+        const orderButtons = document.querySelectorAll(".btn-order");
+        for (let i = 0; i < orderButtons.length; i++) {
+            const orderButton = orderButtons[i];
+            orderButton.addEventListener("click", function() {
+                clearContent();
+                renderOrderPage();
+            });
+        }
+    }
     
     const homeButton = document.querySelector("#home");
     homeButton.addEventListener("click", function() {
         clearContent();
         renderHomePage();
+        addEventListenerToOrderButtons();
     });
 
     const menuButton = document.querySelector("#menu");
@@ -29,11 +41,7 @@ function pageNav() {
         renderContactPage();
     });
 
-    const orderButton = document.querySelector(".btn-order");
-    orderButton.addEventListener("click", function() {
-        clearContent();
-        renderOrderPage();
-    });
+    addEventListenerToOrderButtons();
 }
 
 renderHomePage();

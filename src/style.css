@@ -89,7 +89,8 @@ nav > div > div:hover {
 }
 
 .home-container,
-.contact-container {
+.contact-container,
+.order-container {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
@@ -102,7 +103,8 @@ nav > div > div:hover {
 }
 
 .home-image,
-.contact-image {
+.contact-image,
+.order-image {
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -184,6 +186,29 @@ nav > div > div:hover {
     column-gap: 16px;
 }
 
-.order-container {
+.food-delivery {
+    display: flex;
+    justify-content: left;
+    gap: 64px;
+    padding: 16px 0;
+}
+
+.order-container > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 32px;
+    gap: 32px;
+}
+
+.logo {
+    aspect-ratio: 1;
+    width: 100px;
+    border-radius: 8px;
+    background-size: cover;
+}
+
+.logo:hover {
+    opacity: 0.6;
+    cursor: pointer;
 }
