@@ -76,6 +76,7 @@ nav > div > div:hover {
     padding: 14px 60px;
     border-radius: 32px;
     border: 1.5px solid black;
+    width: fit-content;
 }
 
 .btn-nav:hover {
