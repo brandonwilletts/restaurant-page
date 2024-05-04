@@ -1,10 +1,10 @@
-export default function renderHomePage() {
+const homeContent = {
+    image: "../img/hero.jpeg",
+    headline: "Headline",
+    caption: "This is the caption"
+};
 
-    const homeContent = {
-        image: "../img/hero.jpeg",
-        headline: "Headline",
-        caption: "This is the caption"
-    };
+export default function renderHomePage() {
 
     function createHomeContainerElement() {
         const homeContainerElement = document.createElement("div");

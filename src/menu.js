@@ -71,7 +71,7 @@ export default function renderMenuPage() {
     }
     
     function createMenuHeadingElement() {
-        const headingElement = document.createElement("h2");
+        const headingElement = document.createElement("h1");
         headingElement.textContent = "Menu";
         return headingElement;
     }

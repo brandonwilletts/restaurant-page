@@ -29,11 +29,11 @@ function pageNav() {
         renderContactPage();
     });
 
-    const orderButtons = document.querySelector(".btn-order");
+    const orderButton = document.querySelector(".btn-order");
     orderButton.addEventListener("click", function() {
         clearContent();
         renderOrderPage();
-    })
+    });
 }
 
 renderHomePage();

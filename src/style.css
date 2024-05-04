@@ -13,6 +13,14 @@ h1, h2, h3, h4, h5, h6, p {
     line-height: 1;
 }
 
+h1 {
+    font-size: 32pt;
+}
+
+h2 {
+    font-size: 18pt;
+}
+
 body {
     display: grid;
     min-height: 100vh;
@@ -80,9 +88,8 @@ nav > div > div:hover {
     cursor: pointer;
 }
 
-/* Home Page */
-
-.home-container {
+.home-container,
+.contact-container {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
@@ -90,13 +97,20 @@ nav > div > div:hover {
     height: 100%;
 }
 
-.home-image {
+.home-container h1 {
+    font-size: 42pt;
+    font-weight: 900;
+}
+
+.home-image,
+.contact-image {
     width: 100%;
     height: 100%;
     background-size: cover;
 }
 
-.home-container > div:nth-child(2) {
+.home-container > div:nth-child(2),
+.contact-container > div:nth-child(2) {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,18 +118,11 @@ nav > div > div:hover {
     padding: 0 32px;
 }
 
-.home-container h1 {
-    font-size: 42pt;
-    font-weight: 900;
-}
-
 .home-caption {
     font-size: 20pt;
     font-weight: 500;
     margin-bottom: 12px;
 }
-
-/* Menu Page */
 
 .menu-container {
     display: grid;
@@ -125,7 +132,7 @@ nav > div > div:hover {
     padding: 32px;
 }
 
-.menu-container > h2 {
+.menu-container > h1 {
     grid-column-start: 1;
     grid-column-end: 4;
 }
@@ -143,4 +150,21 @@ nav > div > div:hover {
 
 .menu-price {
 
+}
+
+.contact-container > div:nth-child(2) > div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-container > div:nth-child(2) > div > div p {
+    line-height: 1.5;
+}
+
+.contact-hours {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-auto-rows: 1fr;
+    column-gap: 16px;
 }
