@@ -2,8 +2,8 @@ import { createElement } from "./elements";
 
 const homeContent = {
     image: "../img/hero.jpeg",
-    headline: "Headline",
-    caption: "This is the caption"
+    headline: "World-famous Jamaican patties",
+    caption: "Choose from six mouth-watering flavors!"
 };
 
 export default function renderHomePage() {

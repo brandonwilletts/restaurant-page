@@ -36,7 +36,7 @@ function createFoodDeliveryServices() {
 }
 
 const foodDeliveryServices = createFoodDeliveryServices();
-const orderImage = "../img/hero.jpeg";
+const orderImage = "../img/bus.jpg";
 
 export default function renderOrderPage() {
 

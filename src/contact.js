@@ -1,7 +1,7 @@
 import { createElement } from "./elements";
 
 const contactContent = {
-    image: "../img/hero.jpeg",
+    image: "../img/restaurant.jpg",
     address: {
         street: "774 Summit Street",
         city: "Santa Clara, CA",
