@@ -63,7 +63,7 @@ function createMenuItems() {
 const menuItems = createMenuItems();
 
 export default function renderMenuPage() {
-    
+
     function createMenuContainerElement() {
         const menuContainerElement = document.createElement("div");
         menuContainerElement.classList.add("menu-container");

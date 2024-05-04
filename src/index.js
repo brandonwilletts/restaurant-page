@@ -29,7 +29,7 @@ function pageNav() {
         renderContactPage();
     });
 
-    const orderButton = document.querySelector("#order");
+    const orderButtons = document.querySelector(".btn-order");
     orderButton.addEventListener("click", function() {
         clearContent();
         renderOrderPage();
