@@ -1,3 +1,5 @@
+import { createElement } from "./elements";
+
 const contactContent = {
     image: "../img/hero.jpeg",
     address: {
@@ -20,100 +22,64 @@ const contactContent = {
 
 export default function renderContactPage() {
 
-    function createContactContainerElement() {
-        const contactContainerElement = document.createElement("div");
-        contactContainerElement.classList.add("contact-container");
-        return contactContainerElement
-    }
-
-    function createContactImageElement(image) {
-        const contactImageElement = document.createElement("div");
-        contactImageElement.classList.add("contact-image");
-        contactImageElement.style.cssText = `background-image: url(${image});`;
-        return contactImageElement
-    }
-
-    function createContactDivElement() {
-        const contactDivElement = document.createElement("div");
-        return contactDivElement
-    }
-
-    function createContactHeadingElement(text) {
-        const headingElement = document.createElement("h1");
-        headingElement.textContent = `${text}`;
-        return headingElement
-    }
-
-    function createContactSubheadingElement(text) {
-        const subheadingElement = document.createElement("h2");
-        subheadingElement.textContent = `${text}`;
-        return subheadingElement
-    }
-
-    function createContactTextElement(text) {
-        const textElement = document.createElement("p");
-        textElement.textContent = `${text}`;
-        return textElement
-    }
-
-    const content = document.querySelector("#content");
-
-    const contactContainer = createContactContainerElement();
+    const contactContainer = createElement.div();
+    contactContainer.classList.add("contact-container");
     content.appendChild(contactContainer);
 
-    const image = createContactImageElement(contactContent.image);
+    const image = createElement.image(contactContent.image);
+    image.classList.add("contact-image");
     contactContainer.appendChild(image);
 
-    const divInfo = createContactDivElement();
+    const divInfo = createElement.div();
     contactContainer.appendChild(divInfo);
 
-    const heading = createContactHeadingElement("Nattie's Patties");
+    const heading = createElement.h1("Nattie's Patties");
     divInfo.appendChild(heading);
 
-    const divAddressSection = createContactDivElement();
+    const divAddressSection = createElement.div();
     divInfo.appendChild(divAddressSection);
 
-        const subheadingAddress = createContactSubheadingElement("Address");
+        const subheadingAddress = createElement.h2("Address");
         divAddressSection.appendChild(subheadingAddress);
 
-        const divAddress = createContactDivElement();
+        const divAddress = createElement.div();
         divAddressSection.appendChild(divAddress);
 
         for (let item in contactContent.address) {
-            const text = createContactTextElement(contactContent.address[item]);
+            const text = createElement.text(contactContent.address[item]);
             divAddress.appendChild(text);
         };
 
-    const divContactSection = createContactDivElement();
+    const divContactSection = createElement.div();
     divInfo.appendChild(divContactSection);
 
-        const subheadingContact = createContactSubheadingElement("Contact");
+        const subheadingContact = createElement.h2("Contact");
         divContactSection.appendChild(subheadingContact);
 
-        const divContact = createContactDivElement();
+        const divContact = createElement.div();
         divContactSection.appendChild(divContact);
 
-        const phone = createContactTextElement(contactContent.phone);
+        const phone = createElement.text(contactContent.phone);
         divContact.appendChild(phone);
 
-        const email = createContactTextElement(contactContent.email);
+        const email = createElement.text(contactContent.email);
         divContact.appendChild(email);
 
-    const divHoursSection = createContactDivElement();
+    const divHoursSection = createElement.div();
     divInfo.appendChild(divHoursSection);
     
-        const subheadingHours = createContactSubheadingElement("Hours");
+        const subheadingHours = createElement.h2("Hours");
         divHoursSection.appendChild(subheadingHours);
 
-        const divHours = createContactDivElement();
+        const divHours = createElement.div();
         divHours.classList.add("contact-hours");
         divHoursSection.appendChild(divHours);
 
         for (let item in contactContent.hours) {
-            const day = createContactTextElement(`${item}: `);
+            const day = createElement.text(`${item}: `);
             divHours.appendChild(day);            
             
-            const hours = createContactTextElement(contactContent.hours[item]);
+            const hours = createElement.text(contactContent.hours[item]);
             divHours.appendChild(hours);
         };
 }

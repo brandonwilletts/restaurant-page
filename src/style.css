@@ -93,7 +93,6 @@ nav > div > div:hover {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
-
     height: 100%;
 }
 
@@ -152,6 +151,10 @@ nav > div > div:hover {
 
 }
 
+.contact-container h1 {
+    font-family: Lobster;
+}
+
 .contact-container > div:nth-child(2) > div {
     display: flex;
     flex-direction: column;
@@ -167,4 +170,8 @@ nav > div > div:hover {
     grid-template-columns: auto 1fr;
     grid-auto-rows: 1fr;
     column-gap: 16px;
+}
+
+.order-container {
+    padding: 32px;
 }

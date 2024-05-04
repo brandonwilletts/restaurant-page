@@ -1,7 +1,13 @@
-export default function renderOrderPage() {
-    const content = document.querySelector("#content");
+import { createElement } from "./elements";
 
-    const h1 = document.createElement("h1");
-    h1.textContent = "Order";
-    content.appendChild(h1);
+
+export default function renderOrderPage() {
+
+    const orderContainer = createElement.div();
+    orderContainer.classList.add("order-container");
+    content.appendChild(orderContainer);
+
+    const test = createElement.h1("Order");
+    orderContainer.appendChild(test);
+    
 }

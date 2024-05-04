@@ -1,3 +1,5 @@
+import { createElement } from "./elements";
+
 const homeContent = {
     image: "../img/hero.jpeg",
     headline: "Headline",
@@ -6,61 +8,25 @@ const homeContent = {
 
 export default function renderHomePage() {
 
-    function createHomeContainerElement() {
-        const homeContainerElement = document.createElement("div");
-        homeContainerElement.classList.add("home-container");
-        return homeContainerElement
-    }
-
-    function createHomeImageElement(image) {
-        const homeImageElement = document.createElement("div");
-        homeImageElement.classList.add("home-image");
-        homeImageElement.style.cssText = `background-image: url(${image});`;
-        return homeImageElement
-    }
-
-    function createHomeDivElement() {
-        const homeDivElement = document.createElement("div");
-        return homeDivElement
-    }
-
-    function createHomeHeadlineElement(text) {
-        const homeHeadlineElement = document.createElement("h1");
-        homeHeadlineElement.textContent = `${text}`;
-        return homeHeadlineElement
-    }
-
-    function createHomeCaptionElement(text) {
-        const homeCaptionElement = document.createElement("p");
-        homeCaptionElement.classList.add("home-caption");
-        homeCaptionElement.textContent = `${text}`;
-        return homeCaptionElement
-    }
-
-    function createHomeOrderButton() {
-        const homeOrderButton = document.createElement("button");
-        homeOrderButton.classList.add("btn-order");
-        homeOrderButton.textContent = "Order";
-        return homeOrderButton
-    }
-
-    const content = document.querySelector("#content");
-
-    const homeContainer = createHomeContainerElement();
+    const homeContainer = createElement.div();
+    homeContainer.classList.add("home-container");
     content.appendChild(homeContainer);
 
-    const image = createHomeImageElement(homeContent.image);
+    const image = createElement.image(homeContent.image);
+    image.classList.add("home-image");
     homeContainer.appendChild(image);
 
-    const div = createHomeDivElement();
+    const div = createElement.div();
     homeContainer.appendChild(div);
 
-    const headline = createHomeHeadlineElement(homeContent.headline);
+    const headline = createElement.h1(homeContent.headline);
     div.appendChild(headline);
 
-    const caption = createHomeCaptionElement(homeContent.caption);
+    const caption = createElement.text(homeContent.caption);
+    caption.classList.add("home-caption");
     div.appendChild(caption);
 
-    const orderButton = createHomeOrderButton();
+    const orderButton = createElement.button("Order");
+    orderButton.classList.add("btn-order");
     div.appendChild(orderButton);
 }

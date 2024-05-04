@@ -1,3 +1,5 @@
+import { createElement } from "./elements";
+
 class MenuItem {
     constructor(name, description, image, priceInDollars) {
         this.name = name;
@@ -8,6 +10,7 @@ class MenuItem {
 }
 
 function createMenuItems() {
+
     const originalPatty = new MenuItem(
         "Original Patty",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
@@ -64,74 +67,32 @@ const menuItems = createMenuItems();
 
 export default function renderMenuPage() {
 
-    function createMenuContainerElement() {
-        const menuContainerElement = document.createElement("div");
-        menuContainerElement.classList.add("menu-container");
-        return menuContainerElement
-    }
-    
-    function createMenuHeadingElement() {
-        const headingElement = document.createElement("h1");
-        headingElement.textContent = "Menu";
-        return headingElement;
-    }
-
-    function createMenuItemContainerElement() {
-        const itemContainerElement = document.createElement("div");
-        itemContainerElement.classList.add("menu-item");
-        return itemContainerElement
-    }
-
-    function createMenuItemImageElement(image) {
-        const imageElement = document.createElement("div");
-        imageElement.classList.add("menu-image");
-        imageElement.style.cssText = `background-image: url(${image});`;
-        return imageElement
-    }
-
-    function createMenuItemNameElement(name) {
-        const nameElement = document.createElement("h3");
-        nameElement.textContent = `${name}`;
-        return nameElement
-    }
-
-    function createMenuItemDescriptionElement(description) {
-        const descriptionElement = document.createElement("p");
-        descriptionElement.textContent = `${description}`;
-        return descriptionElement
-    }
-
-    function createMenuItemPriceElement(price) {
-        const priceElement = document.createElement("p");
-        priceElement.classList.add("menu-price");
-        priceElement.textContent = `$${price}`;
-        return priceElement
-    }
-
-    const content = document.querySelector("#content");
-
-    const menuContainer = createMenuContainerElement();
+    const menuContainer = createElement.div();
+    menuContainer.classList.add("menu-container");
     content.appendChild(menuContainer);
 
-    const heading = createMenuHeadingElement();
+    const heading = createElement.h1("Menu");
     menuContainer.appendChild(heading);
 
     for (let i = 0; i < menuItems.length; i++){
         const menuItem = menuItems[i];
         
-        const itemContainer = createMenuItemContainerElement();
+        const itemContainer = createElement.div();
+        itemContainer.classList.add("menu-item");
         menuContainer.appendChild(itemContainer);
 
-        const image = createMenuItemImageElement(menuItem.image);
+        const image = createElement.image(menuItem.image);
+        image.classList.add("menu-image");
         itemContainer.appendChild(image);
 
-        const name = createMenuItemNameElement(menuItem.name);
+        const name = createElement.h3(menuItem.name);
         itemContainer.appendChild(name);
 
-        const description = createMenuItemDescriptionElement(menuItem.description);
+        const description = createElement.text(menuItem.description);
         itemContainer.appendChild(description);
 
-        const price = createMenuItemPriceElement(menuItem.price);
+        const price = createElement.text(menuItem.price);
+        price.classList.add("menu-price");
         itemContainer.appendChild(price);
     };
 }
