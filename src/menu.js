@@ -76,7 +76,7 @@ export default function renderMenuPage() {
         return headingElement;
     }
 
-    function createMenuItemContainerElement {
+    function createMenuItemContainerElement() {
         const itemContainerElement = document.createElement("div");
         itemContainerElement.classList.add("menu-item");
         return itemContainerElement
