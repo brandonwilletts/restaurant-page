@@ -1,6 +1,5 @@
 import { createElement } from "./elements";
 
-
 export default function renderOrderPage() {
 
     const orderContainer = createElement.div();

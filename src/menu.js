@@ -74,25 +74,37 @@ export default function renderMenuPage() {
     const heading = createElement.h1("Menu");
     menuContainer.appendChild(heading);
 
+    const menuGrid = createElement.div();
+    menuGrid.classList.add("menu-grid");
+    menuContainer.appendChild(menuGrid);
+
     for (let i = 0; i < menuItems.length; i++){
         const menuItem = menuItems[i];
         
         const itemContainer = createElement.div();
         itemContainer.classList.add("menu-item");
-        menuContainer.appendChild(itemContainer);
+        menuGrid.appendChild(itemContainer);
 
         const image = createElement.image(menuItem.image);
         image.classList.add("menu-image");
         itemContainer.appendChild(image);
 
-        const name = createElement.h3(menuItem.name);
-        itemContainer.appendChild(name);
+        const itemDescriptionContainer = createElement.div();
+        itemDescriptionContainer.classList.add("menu-item-description-container");
+        itemContainer.appendChild(itemDescriptionContainer);
+
+        const nameAndPriceContainer = createElement.div();
+        nameAndPriceContainer.classList.add("menu-item-title")
+        itemDescriptionContainer.appendChild(nameAndPriceContainer);
+
+            const name = createElement.h3(menuItem.name);
+            nameAndPriceContainer.appendChild(name);
+
+            const price = createElement.h3(`$${menuItem.price}`);
+            price.classList.add("menu-price");
+            nameAndPriceContainer.appendChild(price);
 
         const description = createElement.text(menuItem.description);
-        itemContainer.appendChild(description);
-
-        const price = createElement.text(menuItem.price);
-        price.classList.add("menu-price");
-        itemContainer.appendChild(price);
+        itemDescriptionContainer.appendChild(description);
     };
 }
