@@ -12,19 +12,19 @@ function createFoodDeliveryServices() {
 
     const uberEats = new FoodDeliveryService(
         "Uber Eats", 
-        "./img/ubereats.png", 
+        "../src/img/ubereats.png", 
         "https://www.ubereats.com"
     );
     
     const doorDash = new FoodDeliveryService(
         "DoorDash", 
-        "./img/doordash.jpeg", 
+        "../src/img/doordash.jpeg", 
         "https://www.doordash.com"
     );
     
     const grubhub = new FoodDeliveryService(
         "Grubhub", 
-        "./img/grubhub.png", 
+        "../src/img/grubhub.png", 
         "https://www.grubhub.com"
     );
 
@@ -36,7 +36,7 @@ function createFoodDeliveryServices() {
 }
 
 const foodDeliveryServices = createFoodDeliveryServices();
-const orderImage = "../img/bus.jpg";
+const orderImage = "../src/img/bus.jpg";
 
 export default function renderOrderPage() {
 
