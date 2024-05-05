@@ -1,7 +1,7 @@
 import { createElement } from "./elements";
 import imgUberEats from "./img/ubereats.png";
 import imgDoorDash from "./img/doordash.jpeg";
-import imgGrubhub from "./img/grubhub.png"
+import imgGrubhub from "./img/grubhub.png";
 import imgBus from "./img/bus.jpg";
 
 class FoodDeliveryService {
