@@ -12,19 +12,19 @@ function createFoodDeliveryServices() {
 
     const uberEats = new FoodDeliveryService(
         "Uber Eats", 
-        "../img/ubereats.png", 
+        "../dist/img/ubereats.png", 
         "https://www.ubereats.com"
     );
     
     const doorDash = new FoodDeliveryService(
         "DoorDash", 
-        "../img/doordash.jpeg", 
+        "../dist/img/doordash.jpeg", 
         "https://www.doordash.com"
     );
     
     const grubhub = new FoodDeliveryService(
         "Grubhub", 
-        "../img/grubhub.png", 
+        "../dist/img/grubhub.png", 
         "https://www.grubhub.com"
     );
 

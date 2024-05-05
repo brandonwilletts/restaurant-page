@@ -1,7 +1,7 @@
 import { createElement } from "./elements";
 
 const homeContent = {
-    image: "../img/hero.jpeg",
+    image: "../dist/img/hero.jpeg",
     headline: "World-famous Jamaican patties",
     caption: "Choose from six mouth-watering flavors!"
 };
