@@ -17,19 +17,19 @@ function createFoodDeliveryServices() {
     const uberEats = new FoodDeliveryService(
         "Uber Eats", 
         imgUberEats, 
-        "https://www.ubereats.com"
+        "https://www.ubereats.com",
     );
     
     const doorDash = new FoodDeliveryService(
         "DoorDash", 
         imgDoorDash, 
-        "https://www.doordash.com"
+        "https://www.doordash.com",
     );
     
     const grubhub = new FoodDeliveryService(
         "Grubhub", 
         imgGrubhub, 
-        "https://www.grubhub.com"
+        "https://www.grubhub.com",
     );
 
     return [
