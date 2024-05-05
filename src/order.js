@@ -1,4 +1,8 @@
 import { createElement } from "./elements";
+import imgUberEats from "./img/ubereats.png";
+import imgDoorDash from "./img/doordash.jpeg";
+import imgGrubhub from "./img/grubhub.png"
+import imgBus from "./img/bus.jpg";
 
 class FoodDeliveryService {
     constructor(name, logo, link) {
@@ -12,19 +16,19 @@ function createFoodDeliveryServices() {
 
     const uberEats = new FoodDeliveryService(
         "Uber Eats", 
-        "../src/img/ubereats.png", 
+        imgUberEats, 
         "https://www.ubereats.com"
     );
     
     const doorDash = new FoodDeliveryService(
         "DoorDash", 
-        "../src/img/doordash.jpeg", 
+        imgDoorDash, 
         "https://www.doordash.com"
     );
     
     const grubhub = new FoodDeliveryService(
         "Grubhub", 
-        "../src/img/grubhub.png", 
+        imgGrubhub, 
         "https://www.grubhub.com"
     );
 
@@ -36,7 +40,7 @@ function createFoodDeliveryServices() {
 }
 
 const foodDeliveryServices = createFoodDeliveryServices();
-const orderImage = "../src/img/bus.jpg";
+const orderImage = imgBus;
 
 export default function renderOrderPage() {
 

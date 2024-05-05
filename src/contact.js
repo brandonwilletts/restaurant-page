@@ -1,7 +1,8 @@
 import { createElement } from "./elements";
+import imgRestaurant from "./img/restaurant.jpg";
 
 const contactContent = {
-    image: "../src/img/restaurant.jpg",
+    image: imgRestaurant,
     address: {
         street: "774 Summit Street",
         city: "Santa Clara, CA",
