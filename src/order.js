@@ -16,20 +16,20 @@ function createFoodDeliveryServices() {
 
     const uberEats = new FoodDeliveryService(
         "Uber Eats", 
-        "./img/ubereats.png", 
-        imgUberEats
+        imgUberEats, 
+        "https://www.ubereats.com"
     );
     
     const doorDash = new FoodDeliveryService(
         "DoorDash", 
-        "./img/doordash.jpeg", 
-        imgDoorDash
+        imgDoorDash, 
+        "https://www.doordash.com"
     );
     
     const grubhub = new FoodDeliveryService(
         "Grubhub", 
-        "./img/grubhub.png", 
-        imgGrubhub
+        imgGrubhub, 
+        "https://www.grubhub.com"
     );
 
     return [
